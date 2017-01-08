@@ -1,1 +1,0 @@
-# tugasbab10
