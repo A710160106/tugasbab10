@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+struct Buku
+{
+    char judul[50];
+    char penulis[50];
+    char subjek[100];
+    int id_buku;
+};
+int main()
+{
+    struct Buku buku1;
+    struct Buku buku2;
+    strcpy( buku1.judul,"Pemrograman C");
+    strcpy( buku1.penulis,"Ali Topan");
+    strcpy( buku1.subjek,"Tutorial pemrograman C");
+    buku1.id_buku = 1001;
+    strcpy( buku2.judul,"Bahasa dan Sastra");
+    strcpy( buku2.penulis,"Retno Jaya");
+    strcpy( buku2.subjek,"Kumpulan sastra Indonesia");
+    buku2.id_buku = 2001;
+    Buku( buku1 );
+    Buku( buku2 );
+    return 0;
+}
+void printBuku(struct Buku bukusaya)
+{
+    printf("Buku judul : %s\n", bukusaya.judul);
+    printf("Buku penulis : %s\n", bukusaya.penulis);
+    printf("Buku subjek :  %s\n", bukusaya.subjek);
+    printf("Buku id_buku : %d\n", bukusaya.id_buku);
+    printf("\n");
+}

@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+struct Buku
+{
+    char judul[50];
+    char penulis[50];
+    char subjek[100];
+    int id_buku;
+};
+int main()
+{
+    struct Buku bukusaya[10];
+    int max = 10;
+    int i;
+    for(i = 0; i < max; i++)
+    {
+        system("cls");
+        printf("Masukkan Judul Buku: \n");
+        gets(bukusaya[i].judul);
+        printf("Masukkan Penulis Buku: \n");
+        gets(bukusaya[i].penulis);
+        printf("Masukkan Subjek Buku: \n");
+        gets(bukusaya[i].subjek);
+        bukusaya[i].id_buku = i + 1;
+    }
+    for(i = 0; i < max; i++)
+    {
+    printf("Daftar Buku yang telah Anda masukkan: \n");
+    printf("======================================\n");
+    printf("ID Buku: %d\n", bukusaya[i].id_buku);
+    printf("Buku judul : %s\n", bukusaya[i].judul);
+    printf("Buku penulis : %s\n", bukusaya[i].penulis);
+    printf("Buku subjek :  %s\n", bukusaya[i].subjek);
+    printf("======================================\n");
+    printf("\n");
+    }
+    return 0;
+};
